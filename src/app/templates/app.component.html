@@ -2,9 +2,9 @@
 <nav>
   <a routerLink="/welcome" routerLinkActive="active">Welcome</a>
   <a routerLink="/beers" routerLinkActive="active">Beers</a>
-  <a routerLink="/login" routerLinkActive="active">Login</a>
-  <a routerLink="/signup" routerLinkActive="active">Signup</a>
-  <button (click)="doLogout()">Logout</button>
+  <a *ngIf="!loggedInBoolean" routerLink="/login" routerLinkActive="active">Login</a>
+  <a *ngIf="!loggedInBoolean" routerLink="/signup" routerLinkActive="active">Signup</a>
+  <button *ngIf="loggedInBoolean" (click)="doLogout()">Logout</button>
 </nav>
 
 <router-outlet></router-outlet>
