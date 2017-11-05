@@ -1,0 +1,9 @@
+<div>
+    <h3>Signup Form</h3>
+    <form (ngSubmit)="onSubmit()" #signupForm="ngForm">
+        E-Mail: <input type="text" required id="email" [(ngModel)]="model.email" name="email"><br>
+        Password: <input type="text" id="password" [(ngModel)]="model.password" name="password"><br>
+      <button type="submit">Signup</button>
+      <br>{{signupResult}}
+    </form>
+</div>
